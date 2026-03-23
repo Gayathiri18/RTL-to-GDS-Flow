@@ -21,11 +21,15 @@ The counter is a 4-bit synchronous up-counter with:
 
 #### Files Used
 Inputs:
-Functional verification results
-a) counter.v - RTL design of 4-bit counter
-b) counter_tb.v - Testbench for simulation
+| File Name                  | Description                   |
+| -----------------------    | ------------------            |
+| counter.v                  | RTL design of 4-bit counter   |
+| counter_tb.v               | Testbench for simulation      |
+
 Outputs:
-Waveforms (SimVision)
+| File Form                  | Tool              |
+| -----------------------    | ------------------       |
+| Waveforms                  | SimVision                |
 
 #### Simulation Tool:
 Cadence Xcelium (xrun)
