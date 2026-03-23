@@ -4,7 +4,6 @@
  
 It also includes timing analysis, power estimation, and parasitic extraction to ensure the design meets performance and design rule requirements.This script automates the RTL-to-GDS flow for efficient and repeatable ASIC implementation.
 
-=======================================
 ## 1. RTL Simulation using Cadence Xcelium
 ### Overview
 This project demonstrates the RTL simulation of a 4-bit synchronous counter using Verilog HDL and Cadence Xcelium (xrun). The behavioral modelling is used to model the Verilog code.
