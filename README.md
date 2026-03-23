@@ -123,9 +123,10 @@ Inputs:
 | `counter_netlist.v` | Synthesized gate-level netlist   |
 | `counter_tb.v`      | Testbench                        |
 | `slow.v`            | Standard cell Verilog model file |
+
 Outputs:
-Waveforms with propagation delay
-Functional validation of synthesized design
+* Waveforms with propagation delay
+* Functional validation of synthesized design
 
 #### Working Directory
 $Working_Directory/rtl2gds/gls
