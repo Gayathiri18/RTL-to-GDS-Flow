@@ -1,23 +1,25 @@
-# RTL-to-GDS-Flow
+RTL 2 GDS Simulation of 4-bit Counter Using Cadence Tools:
+
+## 1. RTL Simulation using Cadence Xcelium
 ### Overview
 This project demonstrates the RTL simulation of a 4-bit synchronous counter using Verilog HDL and Cadence Xcelium (xrun). The behavioral modelling is used to model the Verilog code.
 The goal is to verify the functional correctness of the counter design.
 
 #### Working Directory
-/home/super/circuits/virtuoso_test/rtl2gds/rtl/
+$Working_Directory/rtl2gds/rtl/
 
-### Design Description
+#### Design Description
 The counter is a 4-bit synchronous up-counter with:
     Clock input (clk)
     Asynchronous reset (rst)
     4-bit output (q[3:0])
 
-### Functionality
+#### Functionality
     On reset → output becomes 0000
     On every rising clock edge → counter increments by 1
     After 1111 → wraps to 0000
 
-### Files Used
+#### Files Used
 Inputs:
 Functional verification results
 a) counter.v - RTL design of 4-bit counter
@@ -25,20 +27,20 @@ b) counter_tb.v - Testbench for simulation
 Outputs:
 Waveforms (SimVision)
 
-### Simulation Tool:
+#### Simulation Tool:
 Cadence Xcelium (xrun)
 Waveform Viewer: SimVision
 
-### Steps to Run Simulation
+#### Steps to Run Simulation
 Clean Previous Runs
 rm -rf xrun.*
 
-### Command to run Simulation:
+#### Command to run Simulation:
 xrun -gui -access +rwc counter.v counter_tb.v
 
 ##-access +rwc - for signals visibility (read/write access/create/debug access)
 
-### Waveform Viewing Steps:
+#### Waveform Viewing Steps:
 Open SimVision GUI
 Navigate to:
 counter_tb → uut
@@ -48,7 +50,7 @@ Click Run
 Press f for Zoom Fit
 
 
-1. RTL Synthesis using Cadence Genus
+## 2. RTL Synthesis using Cadence Genus
 ### Overview:
 Synthesis is the process of transforming a high-level Register Transfer Level (RTL) design into a **gate-level netlist** using a standard cell library. In this project, Cadence Genus is used to convert the Verilog description of the counter into an optimized hardware implementation.
 During synthesis, the tool interprets the functional behavior of the RTL and maps it into a network of logic gates (such as AND, NAND, and inverters) and sequential elements (flip-flops). The process is guided by timing constraints provided through the SDC file, ensuring that the design meets the required performance specifications.
@@ -60,13 +62,13 @@ Synthesis involves three major stages:
 The output of synthesis includes a **gate-level netlist**, along with reports for timing, area, and power. This netlist represents the actual hardware structure and is used for further stages such as gate-level simulation and physical design.
 Overall, synthesis bridges the gap between abstract design and physical realization, making it a critical step in the ASIC design flow.
 
-### Design Flow:
+#### Design Flow:
 Synthesis → Gate-Level Netlist
 
-###Working Directory:
-/home/super/circuits/virtuoso_test/rtl2gds/synthesis/
+#### Working Directory:
+$Working_Directory/rtl2gds/synthesis/
 
-### Files Used
+#### Files Used
 Inputs:
 | File Name                  | Description           |
 | -----------------------    | ------------------    |
@@ -87,26 +89,26 @@ Area report
 Power report
 QoR report
 
-### Tools Used
+#### Tools Used
 Tool Used: Cadence Genus
 
-### Command to run
+#### Command to run
 Launch synthesis: genus
 Run script: source genus_script.tcl (Inside genus tool)
 
-### Key Synthesis Steps
+#### Key Synthesis Steps
 Read RTL and library
 Elaborate design
 Apply constraints
 Map to standard cells
 Optimize for timing, area, and power
 
-3. Gate-Level Simulation (GLS)
+## ##3. Gate-Level Simulation (GLS)
 ### Overview
 Gate-Level Simulation (GLS) is performed after synthesis to verify that the **synthesized gate-level netlist behaves identically to the RTL design**. Unlike RTL simulation, GLS includes the actual standard cells (flip-flops, logic gates) and introduces realistic propagation delays.
 This step ensures that synthesis has not altered the functional behavior of the design and that the design is ready for physical implementation.
 
-### Files Used
+#### Files Used
 Inputs:
 | File Name           | Description                      |
 | ------------------- | -------------------------------- |
@@ -117,38 +119,39 @@ Outputs:
 Waveforms with propagation delay
 Functional validation of synthesized design
 
-### Working Directory: /home/super/circuits/virtuoso_test/rtl2gds/gls
+#### Working Directory
+$Working_Directory/rtl2gds/gls
 
-###  Simulation Command
+####  Simulation Command
 xrun -gui -access +rwc -timescale 1ns/1ps \
 ../synthesis/output/counter_netlist.v counter_tb.v \
 -v /home/install/FOUNDRY/digital/90nm/dig/vlog/slow.v
 
 To run script: ./run_gls.sh
 
-### Key Requirements
+#### Key Requirements
 
 * Standard cell model file (`slow.v`) must be included
 * Timescale must be defined for all modules (Both in design and testbench verilog files)
 * Testbench from RTL simulation can be reused
 
-### Observations
+#### Observations
 
 * Outputs show **slight delay after clock edge** due to gate-level implementation
 * Propagation delays are introduced by standard cells
 * Timing behavior is more realistic compared to RTL simulation
 
-4. Physical Design Implementation Steps
+## 4. Physical Design Implementation Steps
 ### Overview
 Physical design is the process of transforming the synthesized gate-level netlist into a final layout (GDSII) ready for fabrication.
 In this project, Cadence Innovus is used to perform floorplanning, placement, routing, and verification of the 4-bit counter design.
 
 This stage converts the logical representation into a physical silicon layout, ensuring that the design meets timing, area, and design rule constraints.
 
-### Working Directory
-/home/super/circuits/virtuoso_test/rtl2gds/implementation/
+#### Working Directory
+$Working_Directory/rtl2gds/implementation/
 
-### Files Used
+#### Files Used
 Inputs:
 | File Name             | Description                         |
 | --------------------- | ----------------------------------- |
@@ -178,10 +181,10 @@ Reports:
 | `final_power.rpt`  | Report of dynamic and leakage power consumption                  |
 | `final_area.rpt`   | Report showing total cell area and utilization                   |
 
-### Tool Used
+#### Tool Used
 Cadence Innovus
 
-### Key Physical Design Steps
+#### Key Physical Design Steps
 i. Design Initialization
 ii. Floorplanning
 iii. Power Planning
@@ -193,12 +196,12 @@ viii. RC Extraction
 ix. Final Reports
 x. GDSII Generation
 
-### Observations
+#### Observations
 Routing completed successfully with proper connectivity
 No major DRC violations observed
 Layout shows correct placement of standard cells and power grid
 Design successfully transformed from netlist to physical layout
 
-Final Conclusion
+## Final Conclusion
 
 This project highlights a complete ASIC design cycle and provides practical insight into both front-end and back-end design processes, emphasizing the importance of verification and optimization at every stage of the flow.
