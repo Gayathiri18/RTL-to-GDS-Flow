@@ -1,4 +1,4 @@
-RTL 2 GDS Simulation of 4-bit Counter Using Cadence Tools:
+# RTL 2 GDS Simulation of 4-bit Counter Using Cadence Tools:
 
 ## 1. RTL Simulation using Cadence Xcelium
 ### Overview
