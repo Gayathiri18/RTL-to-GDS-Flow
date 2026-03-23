@@ -132,11 +132,10 @@ Outputs:
 $Working_Directory/rtl2gds/gls
 
 ####  Simulation Command
-xrun -gui -access +rwc -timescale 1ns/1ps \
-../synthesis/output/counter_netlist.v counter_tb.v \
--v /home/install/FOUNDRY/digital/90nm/dig/vlog/slow.v
+xrun -gui -access +rwc -timescale 1ns/1ps ../synthesis/output/counter_netlist.v counter_tb.v -v /home/install/FOUNDRY/digital/90nm/dig/vlog/slow.v
 
-To run script: ./run_gls.sh
+To run script: 
+./run_gls.sh
 
 #### Key Requirements
 
