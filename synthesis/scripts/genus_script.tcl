@@ -3,7 +3,7 @@
 # ================================
 
 # Set search paths
-set_db init_lib_search_path {/home/install/FOUNDRY/digital/90nm/dig/lib}
+set_db init_lib_search_path {$Installation_directory/FOUNDRY/digital/90nm/dig/lib}
 set_db init_hdl_search_path {../../rtl}
 
 # Define design
