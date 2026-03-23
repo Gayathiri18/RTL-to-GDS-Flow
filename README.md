@@ -3,7 +3,7 @@
 This project demonstrates the RTL simulation of a 4-bit synchronous counter using Verilog HDL and Cadence Xcelium (xrun). The behavioral modelling is used to model the Verilog code.
 The goal is to verify the functional correctness of the counter design.
 
-### Working Directory
+#### Working Directory
 /home/super/circuits/virtuoso_test/rtl2gds/rtl/
 
 ### Design Description
