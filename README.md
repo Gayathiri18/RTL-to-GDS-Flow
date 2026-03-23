@@ -151,10 +151,7 @@ To run script:
 
 ## 4. Physical Design Implementation Steps
 ### Overview
-Physical design is the process of transforming the synthesized gate-level netlist into a final layout (GDSII) ready for fabrication.
-In this project, Cadence Innovus is used to perform floorplanning, placement, routing, and verification of the 4-bit counter design.
-
-This stage converts the logical representation into a physical silicon layout, ensuring that the design meets timing, area, and design rule constraints.
+Physical design is the process of transforming the synthesized gate-level netlist into a final layout (GDSII) ready for fabrication. In this project, Cadence Innovus is used to perform floorplanning, placement, routing, and verification of the 4-bit counter design. This stage converts the logical representation into a physical silicon layout, ensuring that the design meets timing, area, and design rule constraints.
 
 #### Working Directory
 $Working_Directory/rtl2gds/implementation/
@@ -169,6 +166,7 @@ Inputs:
 | `innovus_script.tcl`  | Physical design automation script   |
 | `counter_out.sdc`     | Timing constraints                  |
 | LEF Files             | Technology & standard cell geometry |
+
 Outputs:
 | File Name           | Description                                                    |
 | ------------------- | -------------------------------------------------------------- |
@@ -179,7 +177,7 @@ Outputs:
 | `placement.enc`     | Saved design after placement stage                             |
 | `cts.enc`           | Saved design after clock tree synthesis stage *(if performed)* |
 
-Reports:
+#### Reports
 | File Name          | Description                                                      |
 | ------------------ | ---------------------------------------------------------------- |
 | `connectivity.rpt` | Report verifying net connectivity and ensuring no floating nodes |
@@ -193,22 +191,22 @@ Reports:
 Cadence Innovus
 
 #### Key Physical Design Steps
-i. Design Initialization
-ii. Floorplanning
-iii. Power Planning
-iv. Placement
-v. Clock Tree Synthesis (CTS)
-vi. Routing
-vii. Physical Verification
-viii. RC Extraction
-ix. Final Reports
-x. GDSII Generation
+* Design Initialization
+* Floorplanning
+* Power Planning
+* Placement
+* Clock Tree Synthesis (CTS)
+* Routing
+* Physical Verification
+* RC Extraction
+* Final Reports
+* GDSII Generation
 
 #### Observations
-Routing completed successfully with proper connectivity
-No major DRC violations observed
-Layout shows correct placement of standard cells and power grid
-Design successfully transformed from netlist to physical layout
+* Routing completed successfully with proper connectivity
+* No major DRC violations observed
+* Layout shows correct placement of standard cells and power grid
+* Design successfully transformed from netlist to physical layout
 
 ## Final Conclusion
 
