@@ -1,7 +1,6 @@
 # ==========================================
 # GLOBAL SETTINGS FOR INNOVUS (90nm FLOW)
 # ==========================================
-#  /home/install/FOUNDRY/digital/90nm/dig/lef/gsclib090_tech.lef
 
 # -------- Power & Ground --------
 set init_pwr_net {VDD}
@@ -9,13 +8,13 @@ set init_gnd_net {VSS}
 
 # -------- LEF FILES (Physical Library) --------
 set init_lef_file {
-    /home/install/FOUNDRY/digital/90nm/dig/lef/gsclib090_translated.lef
-    /home/install/FOUNDRY/digital/90nm/dig/lef/gsclib090_tech.lef
+    $Installation_Directory/digital/90nm/dig/lef/gsclib090_translated.lef
+    $Installation_Directory/digital/90nm/dig/lef/gsclib090_tech.lef
 }
 
 # -------- Netlist (from synthesis) --------
 set init_verilog {
-    /home/super/circuits/virtuoso_test/rtl2gds/synthesis/output/counter_netlist.v
+    $Working_Directory/rtl2gds/synthesis/output/counter_netlist.v
 }
 
 # -------- MMMC Setup --------
