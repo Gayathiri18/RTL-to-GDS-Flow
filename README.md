@@ -47,13 +47,13 @@ xrun -gui -access +rwc counter.v counter_tb.v
 ##-access +rwc - for signals visibility (read/write access/create/debug access)
 
 #### Waveform Viewing Steps:
-Open SimVision GUI
+* Open SimVision GUI
 Navigate to:
-counter_tb → uut
-Select signals: clk, rst, q[3:0]
-Right-click → Send to Waveform
-Click Run
-Press f for Zoom Fit
+* counter_tb → uut
+* Select signals: clk, rst, q[3:0]
+* Right-click → Send to Waveform
+* Click Run
+* Press f for Zoom Fit
 
 
 ## 2. RTL Synthesis using Cadence Genus
