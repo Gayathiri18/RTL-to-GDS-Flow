@@ -105,13 +105,13 @@ Launch synthesis: genus
 Run script: source genus_script.tcl (Inside genus tool)
 
 #### Key Synthesis Steps
-Read RTL and library
-Elaborate design
-Apply constraints
-Map to standard cells
-Optimize for timing, area, and power
+* Read RTL and library
+* Elaborate design
+* Apply constraints
+* Map to standard cells
+* Optimize for timing, area, and power
 
-## ##3. Gate-Level Simulation (GLS)
+## 3. Gate-Level Simulation (GLS)
 ### Overview
 Gate-Level Simulation (GLS) is performed after synthesis to verify that the **synthesized gate-level netlist behaves identically to the RTL design**. Unlike RTL simulation, GLS includes the actual standard cells (flip-flops, logic gates) and introduces realistic propagation delays.
 This step ensures that synthesis has not altered the functional behavior of the design and that the design is ready for physical implementation.
