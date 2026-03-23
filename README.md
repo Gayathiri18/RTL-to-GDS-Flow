@@ -104,6 +104,12 @@ Tool Used: Cadence Genus
 Launch synthesis: genus
 Run script: source genus_script.tcl (Inside genus tool)
 
+or
+To invoke tool and run: genus -files genus_script.tcl
+
+or
+To run the script: ./run_genus.sh
+
 #### Key Synthesis Steps
 * Read RTL and library
 * Elaborate design
