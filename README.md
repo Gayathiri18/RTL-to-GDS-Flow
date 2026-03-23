@@ -27,13 +27,15 @@ Inputs:
 | counter_tb.v               | Testbench for simulation      |
 
 Outputs:
-| File Form                  | Tool              |
+| File Form                  | Tool                     |
 | -----------------------    | ------------------       |
 | Waveforms                  | SimVision                |
 
 #### Simulation Tool:
-Cadence Xcelium (xrun)
-Waveform Viewer: SimVision
+| File Form                  | Tool                     |
+| -----------------------    | ------------------       |
+| Verilog Simulation         | Cadence Xcelium (xrun)   |
+| Waveforms                  | SimVision                |
 
 #### Steps to Run Simulation
 Clean Previous Runs
