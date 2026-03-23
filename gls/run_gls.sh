@@ -11,8 +11,8 @@ xrun -gui -access +rwc \
 
 # After Synthesis Run 
 #xrun -gui -access +rwc \
-/home/super/circuits/virtuoso_test/rtl2gds/synthesis/output/counter_netlist.v counter_tb.v \
--v /home/install/FOUNDRY/digital/90nm/dig/vlog/slow.v
+# /home/super/circuits/virtuoso_test/rtl2gds/synthesis/output/counter_netlist.v counter_tb.v \
+# -v /home/install/FOUNDRY/digital/90nm/dig/vlog/slow.v
 
 
 
