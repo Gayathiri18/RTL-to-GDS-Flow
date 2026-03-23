@@ -87,13 +87,15 @@ Outputs:
 | -----------------------    | ------------------       |
 | counter_netlist.v          | Gate-level netlist       |
 | counter_out.sdc            | Synthesized constraints  |
-| Standard cell library      | Library Information      |
 
 Reports:
-Timing report
-Area report
-Power report
-QoR report
+| File Name            | Description                                                                                      | 
+|----------------------|--------------------------------------------------------------------------------------------------|
+| `counter_timing.rpt` | Timing report showing path delays, setup/hold analysis, and slack values                         |
+| `counter_area.rpt`   | Area report showing total cell area and utilization of the design                                |
+| `counter_power.rpt`  | Power report showing dynamic and leakage power consumption                                       |
+| `counter_qor.rpt`    | Quality of Results (QoR) report summarizing timing, area, power, and design optimization metrics |
+
 
 #### Tools Used
 Tool Used: Cadence Genus
