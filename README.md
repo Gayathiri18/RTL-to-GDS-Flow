@@ -61,9 +61,9 @@ Synthesis is the process of transforming a high-level Register Transfer Level (R
 During synthesis, the tool interprets the functional behavior of the RTL and maps it into a network of logic gates (such as AND, NAND, and inverters) and sequential elements (flip-flops). The process is guided by timing constraints provided through the SDC file, ensuring that the design meets the required performance specifications.
 
 Synthesis involves three major stages:
- **Generic synthesis**: Converts RTL into an intermediate logic representation
- **Technology mapping**: Maps logic into standard cells from the library
- **Optimization**: Improves timing, area, and power based on constraints
+ * **Generic synthesis**: Converts RTL into an intermediate logic representation
+ * **Technology mapping**: Maps logic into standard cells from the library
+ * **Optimization**: Improves timing, area, and power based on constraints
 
 The output of synthesis includes a **gate-level netlist**, along with reports for timing, area, and power. This netlist represents the actual hardware structure and is used for further stages such as gate-level simulation and physical design.
 Overall, synthesis bridges the gap between abstract design and physical realization, making it a critical step in the ASIC design flow.
