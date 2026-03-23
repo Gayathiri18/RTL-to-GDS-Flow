@@ -59,6 +59,7 @@ xrun -gui -access +rwc counter.v counter_tb.v
 ### Overview:
 Synthesis is the process of transforming a high-level Register Transfer Level (RTL) design into a **gate-level netlist** using a standard cell library. In this project, Cadence Genus is used to convert the Verilog description of the counter into an optimized hardware implementation.
 During synthesis, the tool interprets the functional behavior of the RTL and maps it into a network of logic gates (such as AND, NAND, and inverters) and sequential elements (flip-flops). The process is guided by timing constraints provided through the SDC file, ensuring that the design meets the required performance specifications.
+
 Synthesis involves three major stages:
  **Generic synthesis**: Converts RTL into an intermediate logic representation
  **Technology mapping**: Maps logic into standard cells from the library
