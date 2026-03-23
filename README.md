@@ -38,7 +38,7 @@ Outputs:
 | Waveforms                  | SimVision                |
 
 #### Steps to Run Simulation
-Clean Previous Runs
+clean Previous Runs
 rm -rf xrun.*
 
 #### Command to run Simulation:
@@ -47,8 +47,7 @@ xrun -gui -access +rwc counter.v counter_tb.v
 ##-access +rwc - for signals visibility (read/write access/create/debug access)
 
 #### Waveform Viewing Steps:
-* Open SimVision GUI
-Navigate to:
+* Open SimVision GUI, Navigate to:
 * counter_tb → uut
 * Select signals: clk, rst, q[3:0]
 * Right-click → Send to Waveform
